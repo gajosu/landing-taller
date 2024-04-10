@@ -27,11 +27,11 @@
     <section class="h-screen relative">
         <div class="bg-cover bg-center h-full flex flex-col justify-end"
             style="background-image: url('https://via.placeholder.com/1920x1080');">
-            <div class="text-left p-10">
+            <div class="text-left p-10 pb-20 md:p-10">
                 <h2 class="text-5xl font-bold mb-4">Taller Gratuito</h2>
                 <p class="text-2xl mb-4">Aprende a cortar y desbastar con discos de metal como un profesional</p>
                 <button
-                    class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-full uppercase text-lg md:text-2xl">
+                    class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl">
                     ¡Regístrate y Capacítate!
                 </button>
             </div>
