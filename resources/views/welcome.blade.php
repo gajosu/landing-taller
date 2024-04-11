@@ -13,10 +13,10 @@
 <body class="bg-white text-white">
 
     <!-- Header -->
-    <header class="bg-white p-4 absolute top-0 left-0 w-full z-10">
+    <header class="bg-yellow-400 absolute top-0 left-0 w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Placeholder for logo -->
-            <img src="https://via.placeholder.com/150x50?text=Logo" alt="Company Logo" class="h-12">
+            <img src="/images/logo.svg" alt="Company Logo" class="h-12">
             <nav>
                 <!-- Navigation links -->
             </nav>
@@ -25,18 +25,28 @@
 
     <!-- Banner -->
     <section class="h-screen relative">
-        <div class="bg-cover bg-center h-full flex flex-col justify-end"
-            style="background-image: url('https://via.placeholder.com/1920x1080');">
-            <div class="text-left p-10 pb-20 md:p-10">
-                <h2 class="text-5xl font-bold mb-4">Taller Gratuito</h2>
-                <p class="text-2xl mb-4">Aprende a cortar y desbastar con discos de metal como un profesional</p>
+        <!-- Desktop Banner Image -->
+        <div class="hidden md:block bg-cover bg-center h-full flex flex-col justify-end bg-top"
+            style="background-image: url('/images/banner.jpg');"></div>
+
+        <!-- Mobile Banner Image -->
+        <div class="block md:hidden bg-cover bg-center h-full flex flex-col justify-end bg-top"
+            style="background-image: url('/images/banner_mobile.jpg');"></div>
+
+        <!-- Text Content -->
+        <div class="w-full md:max-w-2xl absolute bottom-0">
+            <div class="bg-gradient-to-r from-black to-transparent p-10 pb-20 md:p-10">
+                <h2 class="text-5xl font-bold text-white mb-4">Taller Gratuito</h2>
+                <p class="text-2xl text-white mb-4 max-w-md">Aprende a cortar y desbastar con discos de metal como un
+                    profesional</p>
                 <button
-                    class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl">
+                    class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl">
                     ¡Regístrate y Capacítate!
                 </button>
             </div>
         </div>
     </section>
+
 
 
     <!-- Main Info Section -->
@@ -69,11 +79,11 @@
         </div>
     </section>
 
-    <section class="flex flex-col md:flex-row w-full min-h-screen bg-yellow-400">
+    <section class="flex flex-col md:flex-row w-full md:max-h-screen bg-yellow-400">
         <!-- Left Image Placeholder -->
-        <div class="md:w-1/2 w-full flex-shrink-0 bg-cover bg-center"
-            style="background-image: url('https://via.placeholder.com/900x1100');">
-            <!-- Empty div for the image -->
+        <div class="md:w-1/2 w-full flex-shrink-0">
+            <!-- Add 'ml-auto' to align the image to the right -->
+            <img src="/images/leftbanner.jpg" alt="Placeholder Image" class="h-full ml-auto">
         </div>
 
         <!-- Right Topics List -->
@@ -82,7 +92,7 @@
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">TEMAS:</h2>
                 <div class="space-y-4">
                     <div class="my-10">
-                        <i class="fas fa-check-circle fa-2x text-green-500 mr-2"></i>
+                        <i class="fas fa-check-circle fa-2x text-black mr-2"></i>
                         <span class="font-semibold text-lg md:text-3xl">TEMA 1</span>
                         <ul class="list-disc list-inside pt-3">
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -90,7 +100,7 @@
                         </ul>
                     </div>
                     <div class="my-10">
-                        <i class="fas fa-check-circle fa-2x text-green-500 mr-2"></i>
+                        <i class="fas fa-check-circle fa-2x text-black mr-2"></i>
                         <span class="font-semibold text-lg md:text-3xl">TEMA 2</span>
                         <ul class="list-disc list-inside pt-3">
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -99,7 +109,7 @@
                     </div>
                     <!-- ... More topics ... -->
                     <div class="my-10">
-                        <i class="fas fa-check-circle fa-2x text-green-500 mr-2"></i>
+                        <i class="fas fa-check-circle fa-2x text-black mr-2"></i>
                         <span class="font-semibold text-lg md:text-3xl">TEMA 3</span>
                         <ul class="list-disc list-inside pt-3">
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -107,7 +117,7 @@
                         </ul>
                     </div>
                     <div class="my-10">
-                        <i class="fas fa-check-circle fa-2x text-green-500 mr-2"></i>
+                        <i class="fas fa-check-circle fa-2x text-black mr-2"></i>
                         <span class="font-semibold text-lg md:text-3xl">TEMA 4</span>
                         <ul class="list-disc list-inside pt-3">
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -231,7 +241,7 @@
                     <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
 
                         <button type="submit"
-                            class="w-full py-3 mt-6 font-medium tracking-widest text-black uppercase shadow-lg bg-yellow-500 hover:bg-yellow-600 text-black  rounded-md">
+                            class="w-full py-3 mt-6 font-medium tracking-widest text-black uppercase shadow-lg bg-yellow-400 hover:bg-yellow-500 text-black  rounded-md">
                             Inscribirme
                         </button>
 
