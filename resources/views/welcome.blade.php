@@ -10,7 +10,7 @@
         crossorigin="anonymous">
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-white text-white">
 
     <!-- Header -->
     <header class="bg-white p-4 absolute top-0 left-0 w-full z-10">

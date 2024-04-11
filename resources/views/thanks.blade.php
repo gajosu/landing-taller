@@ -10,8 +10,8 @@
         crossorigin="anonymous">
 </head>
 
-<body class="bg-gray-900 text-white">
-    
+<body class="bg-white text-white">
+
     <!-- Header -->
     <header class="bg-white p-4 absolute top-0 left-0 w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
@@ -25,18 +25,20 @@
 
     <section class="bg-white py-20">
         <div class="container mx-auto px-4">
-            <div class="bg-indigo-600 rounded-lg shadow-xl p-10 text-center">
+            <div class="bg-green-600 rounded-lg shadow-xl p-10 text-center">
                 <!-- Font Awesome Icon -->
                 <i class="fas fa-thumbs-up fa-6x text-white mb-6"></i>
                 <h2 class="text-4xl font-bold text-white mb-6">¡Gracias por inscribirte!</h2>
-                <p class="text-2xl text-indigo-200 mb-8">Hemos recibido tu inscripción con éxito.</p>
-                <p class="text-xl text-indigo-100 mb-8">Pronto recibirás un correo electrónico con más información sobre el taller.</p>
+                <p class="text-2xl text-white-200 mb-8">Hemos recibido tu inscripción con éxito.</p>
+                <p class="text-xl text-white-100 mb-8">Pronto recibirás un correo electrónico con más información sobre
+                    el taller.</p>
                 <a href="/"
-                    class="inline-block text-indigo-600 bg-white rounded-full px-6 py-3 mt-10 focus:outline-none focus:shadow-outline transform transition-colors duration-300 hover:bg-indigo-50">Volver al inicio</a>
+                    class="inline-block text-green-600 bg-white rounded-full px-6 py-3 mt-10 focus:outline-none focus:shadow-outline transform transition-colors duration-300 hover:bg-indigo-50">Volver
+                    al inicio</a>
             </div>
         </div>
     </section>
-    
+
 </body>
 
 </html>
