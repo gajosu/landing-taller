@@ -153,13 +153,14 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Formulario de Inscripción</h2>
             <div class="flex justify-center">
-                <form action="#" method="post" class="w-full md:max-w-3xl shadow overflow-hidden rounded-md">
+                <form action="{{ route('inscribe') }}" method="post" class="w-full md:max-w-3xl shadow overflow-hidden rounded-md">
+                    {{ csrf_field() }}
                     <div class="px-4 py-5 bg-white sm:p-6">
                         <div class="grid grid-cols-1 gap-6">
                             <div class="col-span-1">
-                                <label for="city" class="block text-sm font-medium text-gray-700">Ciudad de
+                                <label for="event_city" class="block text-sm font-medium text-gray-700">Ciudad de
                                     evento</label>
-                                <select name="city" id="city" required
+                                <select name="event_city" id="event_city" required
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm text-black border-2 border-gray-300 rounded-md py-2 px-3">
                                     <option>Guayaquil</option>
                                     <option>Quito</option>
