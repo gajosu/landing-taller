@@ -31,7 +31,7 @@
 
         <!-- Mobile Banner Image -->
         <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-top"
-        style="background-image: url('/images/banner_mobile.jpg'); background-size: contain; background-position: center center;"></div>
+        style="background-image: url('/images/banner_mobile1.jpg');"></div>
 
         <!-- Text Content -->
         <div class="w-full md:max-w-2xl absolute bottom-0">
@@ -131,25 +131,19 @@
 
     <section class="bg-white py-10">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">EXTRAS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">REGALOS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Extras: Gifts -->
                 <div class="flex flex-col items-center text-center">
-                    <img src="https://via.placeholder.com/300" alt="Regalos" class="mb-4">
+                    <img src="/images/extra1.jpg" alt="Regalos" class="mb-4">
                     <h3 class="font-semibold text-xl">Regalos</h3>
                     <p class="text-gray-600">Camiseta y Gorra</p>
                 </div>
                 <!-- Extras: Promotions -->
                 <div class="flex flex-col items-center text-center">
-                    <img src="https://via.placeholder.com/300" alt="Promociones" class="mb-4">
+                    <img src="/images/extra2.jpg" alt="Promociones" class="mb-4">
                     <h3 class="font-semibold text-xl">Promociones</h3>
                     <p class="text-gray-600">Detalles de promociones actuales</p>
-                </div>
-                <!-- Extras: Coupons -->
-                <div class="flex flex-col items-center text-center">
-                    <img src="https://via.placeholder.com/300" alt="Cupones KFC" class="mb-4">
-                    <h3 class="font-semibold text-xl">Cupones KFC</h3>
-                    <p class="text-gray-600">Obtén descuentos en KFC</p>
                 </div>
             </div>
         </div>
