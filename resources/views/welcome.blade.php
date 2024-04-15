@@ -26,11 +26,11 @@
     <!-- Banner -->
     <section class="h-screen relative">
         <!-- Desktop Banner Image -->
-        <div class="hidden md:block bg-cover h-full flex flex-col justify-end bg-top backgroundSlideDown"
+        <div class="hidden md:block bg-cover h-full flex flex-col justify-end bg-bottom backgroundSlideDown"
             style="background-image: url('/images/banner.jpg'); animation-duration: 5s;"></div>
 
         <!-- Mobile Banner Image -->
-        <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-top backgroundSlideDown"
+        <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-bottom backgroundSlideDown"
             style="background-image: url('/images/banner_mobile1.jpg'); animation-duration: 5s;"></div>
 
         <!-- Text Content -->
