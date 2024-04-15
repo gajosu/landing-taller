@@ -16,13 +16,12 @@
     <header class="bg-yellow-400 absolute top-0 left-0 w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Placeholder for logo -->
-            <img src="/images/logo.svg" alt="Company Logo" class="h-12">
+            <a href="/"><img src="/images/logo.svg" alt="Company Logo" class="h-12"></a>
             <nav>
                 <!-- Navigation links -->
             </nav>
         </div>
     </header>
-
     <!-- Banner -->
     <section class="h-screen relative">
         <!-- Desktop Banner Image -->
@@ -31,7 +30,7 @@
 
         <!-- Mobile Banner Image -->
         <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-top"
-        style="background-image: url('/images/banner_mobile1.jpg');"></div>
+            style="background-image: url('/images/banner_mobile1.jpg');"></div>
 
         <!-- Text Content -->
         <div class="w-full md:max-w-2xl absolute bottom-0">
@@ -40,7 +39,8 @@
                 <p class="text-2xl text-white mb-4 max-w-md">Aprende a cortar y desbastar con discos de metal como un
                     profesional</p>
                 <button
-                    class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl">
+                    class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl"
+                    id="register-button">
                     ¡Regístrate y Capacítate!
                 </button>
             </div>
@@ -91,38 +91,40 @@
             <div>
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">TEMAS:</h2>
                 <div class="space-y-4">
-                    <div class="my-10">
-                        <i class="fas fa-check-circle fa-2x text-black mr-2"></i>
-                        <span class="font-semibold text-lg md:text-3xl">TEMA 1</span>
-                        <ul class="list-disc list-inside pt-3">
+                    <div class="">
+                        <i class="fas fa-check-circle text-xl md:text-3xl text-black mr-2"></i>
+                        <span class="font-semibold text-lg md:text-3xl">Bondades del Disco HP2 de rango</span>
+                        {{-- <ul class="list-disc list-inside pt-3">
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                        </ul>
+                        </ul> --}}
                     </div>
-                    <div class="my-10">
-                        <i class="fas fa-check-circle fa-2x text-black mr-2"></i>
-                        <span class="font-semibold text-lg md:text-3xl">TEMA 2</span>
-                        <ul class="list-disc list-inside pt-3">
+                    <div class="">
+                        <i class="fas fa-check-circle text-xl md:text-3xl text-black mr-2"></i>
+                        <span class="font-semibold text-lg md:text-3xl">Clasificación de Los Discos para corte y
+                            desbaste</span>
+                        {{-- <ul class="list-disc list-inside pt-3">
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                        </ul>
+                        </ul> --}}
                     </div>
                     <!-- ... More topics ... -->
-                    <div class="my-10">
-                        <i class="fas fa-check-circle fa-2x text-black mr-2"></i>
-                        <span class="font-semibold text-lg md:text-3xl">TEMA 3</span>
-                        <ul class="list-disc list-inside pt-3">
+                    <div class="">
+                        <i class="fas fa-check-circle text-xl md:text-3xl text-black mr-2"></i>
+                        <span class="font-semibold text-lg md:text-3xl">Como Usar un Disco Abrasivo</span>
+                        {{-- <ul class="list-disc list-inside pt-3">
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                        </ul>
+                        </ul> --}}
                     </div>
-                    <div class="my-10">
-                        <i class="fas fa-check-circle fa-2x text-black mr-2"></i>
-                        <span class="font-semibold text-lg md:text-3xl">TEMA 4</span>
-                        <ul class="list-disc list-inside pt-3">
+                    <div class="">
+                        <i class="fas fa-check-circle text-xl md:text-3xl text-black mr-2"></i>
+                        <span class="font-semibold text-lg md:text-3xl">Como está compuesto nuestro Disco
+                            Abrasivo</span>
+                        {{-- <ul class="list-disc list-inside pt-3">
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </div>
@@ -131,29 +133,34 @@
 
     <section class="bg-white py-10">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">REGALOS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">PROMOCIONES EXCLUSIVAS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center text-center"></div>
                 <!-- Extras: Gifts -->
                 <div class="flex flex-col items-center text-center">
                     <img src="/images/extra1.jpg" alt="Regalos" class="mb-4">
-                    <h3 class="font-semibold text-xl">Regalos</h3>
-                    <p class="text-gray-600">Camiseta y Gorra</p>
+                    <h3 class="font-semibold text-xl text-gray-800">Camiseta y Gorra</h3>
+                    <p class="text-gray-600">Compra $500 en accesorios RECIBE GRATIS 3 camisetas + 2 gorras DeWalt 100
+                        años</p>
                 </div>
                 <!-- Extras: Promotions -->
                 <div class="flex flex-col items-center text-center">
                     <img src="/images/extra2.jpg" alt="Promociones" class="mb-4">
-                    <h3 class="font-semibold text-xl">Promociones</h3>
-                    <p class="text-gray-600">Detalles de promociones actuales</p>
+                    <h3 class="font-semibold text-xl text-gray-800">Bolso</h3>
+                    <p class="text-gray-600">Compra $100 en discos de corte HP2 RECIBE GRATIS 1 bolso térmico DeWalt 100
+                        años</p>
                 </div>
+                <div class="flex flex-col items-center text-center"></div>
             </div>
         </div>
     </section>
 
-    <section class="bg-gray-100 py-10">
+    <section class="bg-gray-100 py-10" id="inscribe">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Formulario de Inscripción</h2>
             <div class="flex justify-center">
-                <form action="{{ route('inscribe') }}" method="post" class="w-full md:max-w-3xl shadow overflow-hidden rounded-md">
+                <form action="{{ route('inscribe') }}" method="post"
+                    class="w-full md:max-w-3xl shadow overflow-hidden rounded-md">
                     {{ csrf_field() }}
                     <div class="px-4 py-5 bg-white sm:p-6">
                         <div class="grid grid-cols-1 gap-6">
@@ -246,7 +253,21 @@
         </div>
     </section>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var registerButton = document.querySelector("#register-button");
 
+            registerButton.addEventListener("click", function(e) {
+                e.preventDefault(); // Prevent the default anchor behavior
+                var inscriptionSection = document.querySelector("#inscribe");
+
+                inscriptionSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
+        });
+    </script>
 
 </body>
 

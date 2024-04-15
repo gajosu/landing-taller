@@ -13,10 +13,10 @@
 <body class="bg-white text-white">
 
     <!-- Header -->
-    <header class="bg-white p-4 absolute top-0 left-0 w-full z-10">
+    <header class="bg-yellow-400 absolute top-0 left-0 w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Placeholder for logo -->
-            <img src="https://via.placeholder.com/150x50?text=Logo" alt="Company Logo" class="h-12">
+            <a href="/"><img src="/images/logo.svg" alt="Company Logo" class="h-12"></a>
             <nav>
                 <!-- Navigation links -->
             </nav>
@@ -30,8 +30,6 @@
                 <i class="fas fa-thumbs-up fa-6x text-white mb-6"></i>
                 <h2 class="text-4xl font-bold text-white mb-6">¡Gracias por inscribirte!</h2>
                 <p class="text-2xl text-white-200 mb-8">Hemos recibido tu inscripción con éxito.</p>
-                <p class="text-xl text-white-100 mb-8">Pronto recibirás un correo electrónico con más información sobre
-                    el taller.</p>
                 <a href="/"
                     class="inline-block text-green-600 bg-white rounded-full px-6 py-3 mt-10 focus:outline-none focus:shadow-outline transform transition-colors duration-300 hover:bg-indigo-50">Volver
                     al inicio</a>
