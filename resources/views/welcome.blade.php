@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body class="bg-white text-white">
@@ -25,27 +26,30 @@
     <!-- Banner -->
     <section class="h-screen relative">
         <!-- Desktop Banner Image -->
-        <div class="hidden md:block bg-cover h-full flex flex-col justify-end bg-top"
-            style="background-image: url('/images/banner.jpg');"></div>
+        <div class="hidden md:block bg-cover h-full flex flex-col justify-end backgroundSlideDown"
+            style="background-image: url('/images/banner.jpg'); animation-duration: 5s;"></div>
 
         <!-- Mobile Banner Image -->
-        <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-top"
-            style="background-image: url('/images/banner_mobile1.jpg');"></div>
+        <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end backgroundSlideDown"
+            style="background-image: url('/images/banner_mobile1.jpg'); animation-duration: 5s;"></div>
 
         <!-- Text Content -->
         <div class="w-full md:max-w-2xl absolute bottom-0">
-            <div class="bg-gradient-to-r from-black to-transparent p-10 pb-20 md:p-10">
-                <h2 class="text-5xl font-bold text-white mb-4">Taller Gratuito</h2>
-                <p class="text-2xl text-white mb-4 max-w-md">Aprende a cortar y desbastar con discos de metal como un
+            <div class="bg-gradient-to-r from-black to-transparent p-10 pb-20 md:p-10 fadeIn">
+                <h2 class="text-5xl font-bold text-white mb-4 fadeInUp" style="animation-delay: 0.5s;">Taller Gratuito
+                </h2>
+                <p class="text-2xl text-white mb-4 max-w-md fadeInUp" style="animation-delay: 1s;">Aprende a cortar y
+                    desbastar con discos de metal como un
                     profesional</p>
                 <button
-                    class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl"
-                    id="register-button">
+                    class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl fadeInUp"
+                    id="register-button" style="animation-delay: 1.5s;">
                     ¡Regístrate y Capacítate!
                 </button>
             </div>
         </div>
     </section>
+
 
 
 
@@ -252,6 +256,7 @@
             </div>
         </div>
     </section>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
