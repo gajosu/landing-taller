@@ -1,0 +1,7 @@
+RewriteEngine on
+# Previene que se redireccione si ya está en el directorio public
+RewriteCond %{REQUEST_URI} !^/public/
+# Redirige todas las solicitudes que no correspondan a archivos o directorios existentes a public
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-d
+RewriteRule ^(.*)$ public/$1 [L]
