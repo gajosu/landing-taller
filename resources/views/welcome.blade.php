@@ -144,7 +144,7 @@
                 <div class="flex flex-col items-center text-center">
                     <img src="/images/extra1.jpg" alt="Regalos" class="mb-4">
                     <h3 class="font-semibold text-xl text-gray-800">Camiseta y Gorra</h3>
-                    <p class="text-gray-600">Compra $500 en accesorios RECIBE GRATIS 3 camisetas + 2 gorras DeWalt 100
+                    <p class="text-gray-600">Compra $500 en accesorios <br><strong>GRATIS</strong><br> 3 camisetas + 2 gorras DeWalt 100
                         años</p>
                 </div>
                 <!-- Extras: Promotions -->
