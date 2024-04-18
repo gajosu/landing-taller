@@ -14,4 +14,8 @@ Route::get('/thanks', function () {
     return view('thanks');
 })->name('thanks');
 
+Route::get('/dewalt/catalogo-accesorios', function () {
+    return response()->redirectTo('/pdf/catalogo-accesorios.pdf');
+})->name('thanks');
+
 Route::post('/inscribe', [\App\Http\Controllers\InscriptionController::class, 'store'])->name('inscribe');
