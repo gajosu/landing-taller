@@ -19,6 +19,7 @@ class InscriptionController extends Controller
             'email' => 'required|email|unique:inscriptions,email',
             'specialty' => ['required', 'in:' . implode(',', ['Eléctrico', 'Carpintero', 'Metalmecánico', 'Mecánico Automotriz', 'Línea Madera', 'Jardinería', 'General'])],
             'business_type' => ['required', 'in:' . implode(',', ['Ferretería', 'Constructora – Contratista', 'Industria', 'Independiente', 'Otros'])],
+            'event_name' => ['required', 'in:' . implode(',', ['Dewalt', 'Black & Decker'])],
         ]);
 
         Inscription::create($request->all());

@@ -19,5 +19,6 @@ class Inscription extends Model
         'email',
         'specialty',
         'business_type',
+        'event_name',
     ];
 }

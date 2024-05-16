@@ -252,6 +252,8 @@
                         </button>
 
                     </div>
+
+                    <input type="hidden" name="event_name" value="Dewalt">
                 </form>
             </div>
         </div>
