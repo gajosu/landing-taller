@@ -26,6 +26,6 @@ Route::get('/dewalt/catalogo-accesorios', function () {
 Route::post('/inscribe', [\App\Http\Controllers\InscriptionController::class, 'store'])->name('inscribe');
 
 Route::get('/migrate', function () {
-    Artisan::call('migrate --force');
+    Artisan::call('migrate', ['--force' => true]);
     return 'Migrated';
 });
