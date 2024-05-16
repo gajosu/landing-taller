@@ -59,7 +59,7 @@
                 <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
                     <i class="fas fa-calendar-check fa-4x mb-5"></i>
                     <span class="font-semibold">FECHA</span>
-                    <span>SÁBADO 27 DE MAYO</span>
+                    <span>LUNES 27 DE MAYO</span>
                 </div>
                 <!-- Address Info -->
                 <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
