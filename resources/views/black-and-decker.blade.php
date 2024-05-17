@@ -32,7 +32,7 @@
 
         <!-- Mobile Banner Image -->
         <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-bottom backgroundSlideDown"
-            style="background-image: url('/images/black-and-decker/banner.jpg'); animation-duration: 5s;"></div>
+            style="background-image: url('/images/black-and-decker/banner_mobile.jpg'); animation-duration: 5s;"></div>
 
         <!-- Text Content -->
         <div class="w-full md:max-w-2xl absolute bottom-0">
