@@ -15,6 +15,14 @@ Route::get('/black-and-decker', function () {
     return view('black-and-decker');
 })->name('black-and-decker');
 
+Route::get('/stanley-28-mayo', function () {
+    return view('stanley_28');
+})->name('stanley-28-mayo');
+
+Route::get('/stanley-29-mayo', function () {
+    return view('stanley_29');
+})->name('stanley-29-mayo');
+
 Route::get('/thanks', function () {
     return view('thanks');
 })->name('thanks');
