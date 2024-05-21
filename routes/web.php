@@ -23,6 +23,14 @@ Route::get('/stanley-29-mayo', function () {
     return view('stanley_29');
 })->name('stanley-29-mayo');
 
+Route::get('/stanley-30-mayo', function () {
+    return view('stanley_30');
+})->name('stanley-30-mayo');
+
+Route::get('/stanley-31-mayo', function () {
+    return view('stanley_31');
+})->name('stanley-31-mayo');
+
 Route::get('/thanks', function () {
     return view('thanks');
 })->name('thanks');

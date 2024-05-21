@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller gratuito - Herramientas Electricas e Inalambricas Stanley</title>
+    <title>Taller gratuito - Herramientas manuales Stanley de Fijación y Destornilladores.<</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         crossorigin="anonymous">
@@ -27,11 +27,11 @@
     <section class="h-screen relative">
         <!-- Desktop Banner Image -->
         <div class="hidden md:block bg-cover h-full flex flex-col justify-end bg-bottom backgroundSlideDown"
-            style="background-image: url('/images/stanley28/banner.jpg'); animation-duration: 5s;"></div>
+            style="background-image: url('/images/stanley30/banner.jpg'); animation-duration: 5s;"></div>
 
         <!-- Mobile Banner Image -->
         <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-bottom backgroundSlideDown"
-            style="background-image: url('/images/stanley28/banner_mobile.jpg'); animation-duration: 5s;"></div>
+            style="background-image: url('/images/stanley30/banner_mobile.jpg'); animation-duration: 5s;"></div>
 
         <!-- Text Content -->
         <div class="w-full md:max-w-2xl absolute bottom-0">
@@ -39,7 +39,7 @@
                 <h2 class="text-5xl font-bold text-white mb-4 fadeInUp" style="animation-delay: 0.5s;">Taller Gratuito
                 </h2>
                 <p class="text-2xl text-white mb-4 max-w-md fadeInUp" style="animation-delay: 1s;">
-                    Si tu trabajo es profesional, ven conoce todo el portafolio en herramientas eléctricas y Inalmbricas
+                    Ven y conoce toda la gama de herramientas para tu taller profesional en herramientas de fijación y destornilladores y su clasificación
                 </p>
                 <button
                     class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl fadeInUp"
@@ -61,7 +61,7 @@
                 <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
                     <i class="fas fa-calendar-check fa-4x mb-5"></i>
                     <span class="font-semibold">FECHA</span>
-                    <span>MARTES 28 DE MAYO</span>
+                    <span>MIERCOLES 29 DE MAYO</span>
                 </div>
                 <!-- Address Info -->
                 <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
@@ -163,7 +163,7 @@
                         </button>
 
                     </div>
-                    <input type="hidden" name="event_name" value="Stanley Herramientas Electricas e Inalambricas">
+                    <input type="hidden" name="event_name" value="Stanley Herramientas Manuales">
                     <input type="hidden" name="event_city" value="Guayaquil">
                 </form>
             </div>

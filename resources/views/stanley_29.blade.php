@@ -38,6 +38,9 @@
             <div class="bg-gradient-to-r from-black to-transparent p-10 pb-20 md:p-10 fadeIn">
                 <h2 class="text-5xl font-bold text-white mb-4 fadeInUp" style="animation-delay: 0.5s;">Taller Gratuito
                 </h2>
+                <p class="text-2xl text-white mb-4 max-w-md fadeInUp" style="animation-delay: 1s;">
+                    Ven y conoces toda las gama de herramientas para tu taller profesional en herramientas de Golpes y de Corte
+                </p>
                 <button
                     class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl fadeInUp"
                     id="register-button" style="animation-delay: 1.5s;">
