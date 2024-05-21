@@ -32,7 +32,15 @@ class InscriptionController extends Controller
             ],
             'specialty' => ['required', 'in:' . implode(',', ['Eléctrico', 'Carpintero', 'Metalmecánico', 'Mecánico Automotriz', 'Línea Madera', 'Jardinería', 'General'])],
             'business_type' => ['required', 'in:' . implode(',', ['Ferretería', 'Constructora – Contratista', 'Industria', 'Independiente', 'Otros'])],
-            'event_name' => ['required', 'in:' . implode(',', ['Dewalt', 'Black & Decker', 'Stanley Golpe y Corte', 'Stanley Herramientas Electricas e Inalambricas', 'Stanley Herramientas Manuales'])],
+            'event_name' => ['required', 'in:' . implode(',', [
+                'Dewalt',
+                'Black & Decker',
+                'Stanley Golpe y Corte',
+                'Stanley Herramientas Electricas e Inalambricas',
+                'Stanley Herramientas Manuales',
+                'Stanley Herramientas Medición y Almacenamiento',
+                'Stanley Herramientas de Fijación y Destornilladores',
+            ])],
         ]);
         Inscription::create($request->all());
 

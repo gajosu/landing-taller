@@ -163,7 +163,7 @@
                         </button>
 
                     </div>
-                    <input type="hidden" name="event_name" value="Stanley Herramientas Manuales">
+                    <input type="hidden" name="event_name" value="">
                     <input type="hidden" name="event_city" value="Guayaquil">
                 </form>
             </div>
