@@ -11,7 +11,7 @@ class InscriptionController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'event_city' => 'required|in:Guayaquil,Quito',
+            'event_city' => 'required|in:Guayaquil,Quito,Santo Domingo',
             'firstname' => 'required',
             'lastname' => 'required',
             'birthday' => 'required|date',
