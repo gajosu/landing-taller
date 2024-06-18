@@ -11,6 +11,10 @@ Route::get('/dewalt', function () {
     return view('welcome');
 })->name('dewalt');
 
+Route::get('/dewalt-29-junio', function () {
+    return view('dewalt-29-junio');
+})->name('dewalt');
+
 Route::get('/black-and-decker', function () {
     return view('black-and-decker');
 })->name('black-and-decker');

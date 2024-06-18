@@ -40,6 +40,7 @@ class InscriptionController extends Controller
                 'Stanley Herramientas Manuales',
                 'Stanley Herramientas Medición y Almacenamiento',
                 'Stanley Herramientas de Fijación y Destornilladores',
+                'Dewalt 29 de Junio',
             ])],
         ]);
         Inscription::create($request->all());

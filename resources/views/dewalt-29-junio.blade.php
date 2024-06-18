@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller gratuito - Herramientas manuales Stanley Golpe y Corte.<</title>
+    <title>Taller gratuito - Aprende a cortar y desbastar con discos de metal como un profesional</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         crossorigin="anonymous">
@@ -13,31 +13,33 @@
 
 <body class="bg-white text-white">
 
-    {{-- <!-- Header -->
-    <header class="bg-black absolute top-0 left-0 w-full z-10">
+    <!-- Header -->
+    <header class="bg-yellow-400 absolute top-0 left-0 w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Placeholder for logo -->
-            <a href="/"><img src="/images/black-and-decker/logo.svg" alt="Black and Decker" class="h-12 my-2"></a>
+            <a href="/"><img src="/images/logo.svg" alt="Company Logo" class="h-12"></a>
             <nav>
                 <!-- Navigation links -->
             </nav>
         </div>
-    </header> --}}
+    </header>
     <!-- Banner -->
     <section class="h-screen relative">
         <!-- Desktop Banner Image -->
         <div class="hidden md:block bg-cover h-full flex flex-col justify-end bg-bottom backgroundSlideDown"
-            style="background-image: url('/images/stanley29/banner.jpg'); animation-duration: 5s;"></div>
+            style="background-image: url('/images/banner.jpg'); animation-duration: 5s;"></div>
 
         <!-- Mobile Banner Image -->
         <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-bottom backgroundSlideDown"
-            style="background-image: url('/images/stanley29/banner_mobile.jpg'); animation-duration: 5s;"></div>
+            style="background-image: url('/images/banner_mobile1.jpg'); animation-duration: 5s;"></div>
 
         <!-- Text Content -->
         <div class="w-full md:max-w-2xl absolute bottom-0">
             <div class="bg-gradient-to-r from-black to-transparent p-10 pb-20 md:p-10 fadeIn">
                 <h2 class="text-5xl font-bold text-white mb-4 fadeInUp" style="animation-delay: 0.5s;">Taller Gratuito
                 </h2>
+                <p class="text-2xl text-white mb-4 max-w-md fadeInUp" style="animation-delay: 1s;">Aprende a cortar y
+                    desbastar con los nuevos discos abrasivos como un profesional</p>
                 <button
                     class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl fadeInUp"
                     id="register-button" style="animation-delay: 1.5s;">
@@ -58,23 +60,26 @@
                 <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
                     <i class="fas fa-calendar-check fa-4x mb-5"></i>
                     <span class="font-semibold">FECHA</span>
-                    <span>MIERCOLES 29 DE MAYO</span>
+                    <span>SÁBADO 29 DE JUNIO</span>
                 </div>
                 <!-- Address Info -->
                 <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
                     <i class="fas fa-map-marker-alt fa-4x mb-5"></i>
-                    <span class="font-semibold">DIRECCIÓN GUAYAQUIL</span>
-                    <span>C.C. Dicentro</span>
+                    <span class="font-semibold">DIRECCIÓN</span>
+                    <span>Av. Bomboli y Severino Fiorini </span>
+
                 </div>
                 <!-- Time Info -->
                 <div class="flex flex-col items-center w-full md:w-1/4">
                     <i class="fas fa-clock fa-4x mb-5"></i>
                     <span class="font-semibold">HORA</span>
-                    <span>05:30 a 06:30 PM</span>
+                    <span>10:00 AM a 12:00 PM</span>
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <section class="bg-gray-100 py-10" id="inscribe">
         <div class="container mx-auto px-4">
@@ -160,8 +165,9 @@
                         </button>
 
                     </div>
-                    <input type="hidden" name="event_name" value="Stanley Herramientas Manuales">
-                    <input type="hidden" name="event_city" value="Guayaquil">
+
+                    <input type="hidden" name="event_name" value="Dewalt 29 de Junio">
+                    <input type="hidden" name="event_city" value="Santo Domingo">
                 </form>
             </div>
         </div>
