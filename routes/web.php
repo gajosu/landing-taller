@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', function () {
-    return response()->redirectToRoute('dewalt');
+    return view('home');
 });
 
 Route::get('/dewalt', function () {
