@@ -7,6 +7,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/activaciones', function () {
+    return view('activaciones');
+})->name('activaciones');
+
 Route::get('/dewalt', function () {
     return view('welcome');
 })->name('dewalt');

@@ -31,7 +31,7 @@ class InscriptionController extends Controller
                 }),
             ],
             'specialty' => ['required', 'in:' . implode(',', ['Eléctrico', 'Carpintero', 'Metalmecánico', 'Mecánico Automotriz', 'Línea Madera', 'Jardinería', 'General'])],
-            'business_type' => ['required', 'in:' . implode(',', ['Ferretería', 'Constructora – Contratista', 'Industria', 'Independiente', 'Otros'])],
+            'business_type' => ['required', 'in:' . implode(',', ['Ferretería', 'Constructora – Contratista', 'Industria', 'Independiente', 'Otros', 'Usuario final'])],
             'event_name' => ['required', 'in:' . implode(',', [
                 'Dewalt',
                 'Black & Decker',
@@ -41,7 +41,8 @@ class InscriptionController extends Controller
                 'Stanley Herramientas Medición y Almacenamiento',
                 'Stanley Herramientas de Fijación y Destornilladores',
                 'Dewalt 29 de Junio',
-                'SBD'
+                'SBD',
+                'Activaciones',
             ])],
         ]);
         Inscription::create($request->all());
