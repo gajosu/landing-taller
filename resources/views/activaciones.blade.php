@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller gratuito - Aprende a cortar y desbastar con discos de metal como un profesional</title>
+    <title>Registro de Activación</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         crossorigin="anonymous">
@@ -28,7 +28,7 @@
                 <button
                     class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full uppercase text-2xl fadeInUp"
                     id="register-button" style="animation-delay: 1.5s;">
-                    ¡Regístrate y Capacítate!
+                    ¡Regístrate!
                 </button>
             </div>
         </div>
@@ -36,7 +36,7 @@
 
     <section class="bg-gray-100 py-10" id="inscribe">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Formulario de Inscripción</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Formulario de Registro</h2>
             <div class="flex justify-center">
                 <form action="{{ route('inscribe') }}" method="post"
                     class="w-full md:max-w-3xl shadow overflow-hidden rounded-md">
@@ -115,7 +115,7 @@
 
                         <button type="submit"
                             class="w-full py-3 mt-6 font-medium tracking-widest text-black uppercase shadow-lg bg-yellow-400 hover:bg-yellow-500 text-black  rounded-md">
-                            Inscribirme
+                            Registrarme
                         </button>
 
                     </div>
