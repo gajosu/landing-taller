@@ -56,9 +56,8 @@
                 <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
                     <i class="fas fa-calendar-check fa-4x mb-5"></i>
                     <span class="font-semibold">FECHA</span>
-                    <span>MODULO 1: del 1 al 5 de julio</span>
-                    <span>MODULO 2: del 15 al 19 de julio</span>
-                    <span>MODULO 3: del 29 al 31 de julio</span>
+                    <span>Stanley: del 5 al 9 de agosto</span>
+                    <span>Dewalt: del 12 al 16 de agosto</span>
                 </div>
                 <!-- Address Info -->
                 <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
