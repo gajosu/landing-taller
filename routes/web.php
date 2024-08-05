@@ -11,6 +11,10 @@ Route::get('/activaciones', function () {
     return view('activaciones');
 })->name('activaciones');
 
+Route::get('/sorteos', function () {
+    return view('sorteos');
+})->name('activaciones');
+
 Route::get('/dewalt', function () {
     return view('welcome');
 })->name('dewalt');
@@ -48,6 +52,8 @@ Route::get('/dewalt/catalogo-accesorios', function () {
 })->name('dewalt.catalogo-accesorios');
 
 Route::post('/inscribe', [\App\Http\Controllers\InscriptionController::class, 'store'])->name('inscribe');
+
+Route::post('/sorteo', [\App\Http\Controllers\SorteoController::class, 'store'])->name('sorteo');
 
 Route::get('/migrate', function () {
     Artisan::call('migrate', ['--force' => true]);
