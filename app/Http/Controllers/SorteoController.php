@@ -32,7 +32,7 @@ class SorteoController extends Controller
         ]);
 
         // put imagen with laravel storage
-        $file = Storage::disk('public')->put('sorteo', $request->file('imagen'));
+        $file = Storage::disk('real_public')->put('sorteo', $request->file('imagen'));
         $url = Storage::url('sorteo/' . $file);
         $data = $request->except(['_token']);
         $data['imagen'] = $url;
