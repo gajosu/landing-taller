@@ -34,8 +34,9 @@ class SorteoController extends Controller
         // put imagen with laravel storage
         $file = Storage::disk('public')->put('sorteo', $request->file('imagen'));
         $url = Storage::url('sorteo/' . $file);
-        $request->merge(['imagen' => $url]);
-        Sorteo::create($request->except(['_token']));
+        $data = $request->except(['_token']);
+        $data['imagen'] = $url;
+        Sorteo::create($data);
 
         return redirect()->route('thanks');
     }
