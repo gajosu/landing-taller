@@ -11,7 +11,7 @@ class InscriptionController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'event_city' => 'required|in:Guayaquil,Quito,Santo Domingo,Ibarra',
+            'event_city' => 'required|in:Guayaquil,Quito,Santo Domingo,Ibarra,Duran',
             'firstname' => 'required',
             'lastname' => 'required',
             'birthday' => 'required|date',
@@ -44,6 +44,7 @@ class InscriptionController extends Controller
                 'SBD',
                 'Activaciones',
                 'Dewalt Taller ibarra',
+                'Taller Durán'
             ])],
         ]);
         Inscription::create($request->all());

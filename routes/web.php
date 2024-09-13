@@ -63,3 +63,7 @@ Route::get('/migrate', function () {
 Route::get('/talleribarra', function () {
     return view('taller-ibarra');
 })->name('talleribarra');
+
+Route::get('/tallerduran', function () {
+    return view('taller-duran');
+})->name('tallerduran');
