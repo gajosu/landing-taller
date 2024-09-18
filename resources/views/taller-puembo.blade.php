@@ -62,7 +62,7 @@
                 <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
                     <i class="fas fa-map-marker-alt fa-4x mb-5"></i>
                     <span class="font-semibold">DIRECCIÓN</span>
-                    <span>Cdla democratica norte MZ L Sola 19 (frente a Grupo Mavesa o diagonal al Banco Guayabí)</span>
+                    <span>Av. Oswaldo Guaysamin y 24 de mayo, la Y de Puembo</span>
 
                 </div>
                 <!-- Time Info -->
