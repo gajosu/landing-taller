@@ -67,3 +67,7 @@ Route::get('/talleribarra', function () {
 Route::get('/tallerduran', function () {
     return view('taller-duran');
 })->name('tallerduran');
+
+Route::get('/tallerpuembo', function () {
+    return view('taller-puembo');
+})->name('tallerpuembo');
