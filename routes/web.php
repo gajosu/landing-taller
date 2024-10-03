@@ -12,7 +12,7 @@ Route::get('/activaciones', function () {
 })->name('activaciones');
 
 Route::get('/premios', function () {
-    return view('sorteos');
+    return view('premios');
 })->name('activaciones');
 
 Route::get('/dewalt', function () {
