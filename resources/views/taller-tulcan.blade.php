@@ -27,11 +27,11 @@
     <section class="h-screen relative">
         <!-- Desktop Banner Image -->
         <div class="hidden md:block bg-cover h-full flex flex-col justify-end bg-bottom backgroundSlideDown"
-            style="background-image: url('/images/taller-tulcan/banner.png'); animation-duration: 5s;"></div>
+            style="background-image: url('/images/tallertulcan/banner.png'); animation-duration: 5s;"></div>
 
         <!-- Mobile Banner Image -->
         <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-bottom backgroundSlideDown"
-            style="background-image: url('/images/taller-tulcan/banner_mobile.png'); animation-duration: 5s;"></div>
+            style="background-image: url('/images/tallertulcan/banner_mobile.png'); animation-duration: 5s;"></div>
 
         <!-- Text Content -->
         <div class="w-full md:max-w-2xl absolute bottom-0">
