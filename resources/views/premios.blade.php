@@ -16,11 +16,11 @@
     <section class="h-screen relative">
         <!-- Desktop Banner Image -->
         <div class="hidden md:block bg-cover h-full flex flex-col justify-end bg-bottom backgroundSlideDown"
-            style="background-image: url('/images/activacion/banner.png'); animation-duration: 5s;"></div>
+            style="background-image: url('/images/premios/banner.png'); animation-duration: 5s;"></div>
 
         <!-- Mobile Banner Image -->
         <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-bottom backgroundSlideDown"
-            style="background-image: url('/images/activacion/banner_mobile.jpg'); animation-duration: 5s;"></div>
+            style="background-image: url('/images/premios/banner_mobile.jpg'); animation-duration: 5s;"></div>
 
         <!-- Text Content -->
         <div class="w-full md:max-w-2xl absolute bottom-0">

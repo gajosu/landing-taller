@@ -11,7 +11,7 @@ Route::get('/activaciones', function () {
     return view('activaciones');
 })->name('activaciones');
 
-Route::get('/sorteos', function () {
+Route::get('/premios', function () {
     return view('sorteos');
 })->name('activaciones');
 
