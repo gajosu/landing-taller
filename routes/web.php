@@ -71,3 +71,11 @@ Route::get('/tallerduran', function () {
 Route::get('/tallerpuembo', function () {
     return view('taller-puembo');
 })->name('tallerpuembo');
+
+Route::get('/tallermanta', function () {
+    return view('taller-manta');
+})->name('tallermanta');
+
+Route::get('/tallertulcan', function () {
+    return view('taller-tulcan');
+})->name('tallertulcan');
