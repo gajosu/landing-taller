@@ -4,8 +4,16 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home.home');
 });
+
+Route::get('/marcas', function () {
+    return view('home.brands');
+})->name('marcas');
+
+Route::get('/contacto', function () {
+    return view('home.contact');
+})->name('marcas');
 
 Route::get('/activaciones', function () {
     return view('activaciones');
