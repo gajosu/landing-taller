@@ -51,6 +51,14 @@ Route::get('/stanley-31-mayo', function () {
     return view('stanley_31');
 })->name('stanley-31-mayo');
 
+Route::get('/tallerimpromafer', function () {
+    return view('impromafer');
+})->name('tallerimpromafer');
+
+Route::get('/tallercomercialaaguilar', function () {
+    return view('comercial-aaguilar');
+})->name('tallercomercialaaguilar');
+
 Route::get('/thanks', function () {
     return view('thanks');
 })->name('thanks');

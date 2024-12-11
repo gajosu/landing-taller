@@ -11,7 +11,7 @@ class InscriptionController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'event_city' => 'required|in:Guayaquil,Quito,Santo Domingo,Ibarra,Duran,Puempo,Manta,Tulcan',
+            'event_city' => 'required|in:Guayaquil,Quito,Santo Domingo,Ibarra,Duran,Puempo,Manta,Tulcan,Machala',
             'firstname' => 'required',
             'lastname' => 'required',
             'birthday' => 'required|date',
@@ -47,7 +47,9 @@ class InscriptionController extends Controller
                 'Taller Durán',
                 'Taller Puempo',
                 'Taller Manta',
-                'Taller Tulcan'
+                'Taller Tulcan',
+                'Taller Impromafer',
+                'Taller Comercial Aguilar',
             ])],
         ]);
         Inscription::create($request->all());
