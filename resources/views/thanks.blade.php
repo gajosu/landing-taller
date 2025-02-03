@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller gratuito - Aprende a cortar y desbastar con discos de metal como un profesional</title>
+    <title>Gracias por inscribirte</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         crossorigin="anonymous">
@@ -24,7 +24,7 @@
                     <i class="fab fa-whatsapp mr-2"></i>Únete a nuestra comunidad de WhatsApp
                 </a>
                 <br>
-                <a href="{{ url()->previous() }}"
+                <a href="/"
                     class="inline-block text-green-600 bg-white rounded-full px-6 py-3 mt-4 focus:outline-none focus:shadow-outline transform transition-colors duration-300 hover:bg-indigo-50">Volver
                     al inicio</a>
             </div>

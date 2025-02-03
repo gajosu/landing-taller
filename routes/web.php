@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\FormController;
+use App\Http\Controllers\FormRecordController;
 
 Route::get('/', function () {
     return view('home.home');
@@ -95,3 +97,50 @@ Route::get('/tallermanta', function () {
 Route::get('/tallertulcan', function () {
     return view('taller-tulcan');
 })->name('tallertulcan');
+
+
+Route::get('/marcas/black-and-decker', function () {
+    return view('home.brands.black-and-decker', [
+        'siteTitle' => 'Black & Decker',
+        'meta_description' => 'Black & Decker'
+    ]);
+})->name('marcas.black-and-decker');
+
+Route::get('/marcas/dewalt', function () {
+    return view('home.brands.dewalt', [
+        'siteTitle' => 'Dewalt',
+        'meta_description' => 'Dewalt'
+    ]);
+})->name('marcas.dewalt');
+
+Route::get('/marcas/stanley', function () {
+    return view('home.brands.stanley', [
+        'siteTitle' => 'Stanley',
+        'meta_description' => 'Stanley'
+    ]);
+})->name('marcas.stanley');
+
+Route::get('/marcas/craftsman', function () {
+    return view('home.brands.craftsman', [
+        'siteTitle' => 'Craftsman',
+        'meta_description' => 'Craftsman'
+    ]);
+})->name('marcas.craftsman');
+
+Route::get('/marcas/irwin', function () {
+    return view('home.brands.irwin', [
+        'siteTitle' => 'Irwin',
+        'meta_description' => 'Irwin'
+    ]);
+})->name('marcas.irwin');
+
+Route::get('/marcas/proto', function () {
+    return view('home.brands.proto', [
+        'siteTitle' => 'Proto',
+        'meta_description' => 'Proto'
+    ]);
+})->name('marcas.proto');
+
+// Nueva ruta para los registros de formularios
+Route::get('/forms/{slug}', [FormController::class, 'show'])->name('forms.show');
+Route::post('/forms/{slug}/register', [FormRecordController::class, 'store'])->name('forms.register');

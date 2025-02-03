@@ -4,17 +4,30 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>
-        Centro de entrenamiento SBD
+        {{ !empty($siteTitle) ? $siteTitle . ' | ' : '' }}Centro de entrenamiento SBD
     </title>
+
+    @if (empty($meta_description))
+        <meta name="description" content="Centro de entrenamiento SBD">
+    @else
+        <meta name="description" content="{{ $meta_description }}">
+    @endif
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    {{-- Sección para CSS específico de cada página --}}
+    @yield('styles')
+
+    {{-- Sección para JS en el head --}}
+    @yield('head-scripts')
 </head>
 
 <body class="font-sans">
-    <header class="bg-white shadow-md">
+    <header class="shadow-md fixed top-0 w-full z-50" style="background: #febd18;">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center">
-                <img alt="Centro de entrenamiento SBD Logo" class="h-12"
+                <img alt="Centro de entrenamiento SBD Logo" class="h-14"
                     src="/images/logoSBD.svg"
                     width="150" />
             </div>
@@ -88,6 +101,7 @@
                         Accessibility Statement
                     </a>
                 </div>
+
             </div>
             <div class="flex items-center mt-4 space-x-2 md:mt-0">
                 <div class="flex items-center space-x-2">
@@ -127,6 +141,9 @@
             </div>
         </footer>
     </div>
+
+    {{-- Sección para JS al final del body --}}
+    @yield('scripts')
 </body>
 
 </html>
