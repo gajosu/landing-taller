@@ -19,6 +19,7 @@ class FormRecordController extends Controller
             'firstname' => 'required|string|max:255',
             'lastname' => 'required|string|max:255',
             'birthday' => 'required|date',
+            'city' => 'required|string|max:255',
             'cedula' => [
                 'required',
                 'string',
@@ -48,7 +49,8 @@ class FormRecordController extends Controller
             'email' => $request->email,
             'specialty' => $request->specialty,
             'business_type' => $request->business_type,
-            'status' => 'pending'
+            'status' => 'pending',
+            'city' => $request->city,
         ]);
 
         return redirect()->route('thanks');

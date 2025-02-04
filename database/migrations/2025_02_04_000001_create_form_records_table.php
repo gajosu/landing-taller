@@ -26,6 +26,7 @@ return new class extends Migration
             $table->index('cedula');
             $table->index('email');
             $table->index('status');
+            $table->string('city')->nullable();
 
             // Asegurar que no haya duplicados por formulario
             $table->unique(['form_id', 'cedula']);

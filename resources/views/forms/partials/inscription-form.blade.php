@@ -66,6 +66,14 @@
                                 class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm text-black border-2 border-gray-300 rounded-md py-2 px-3 @error('email') border-red-500 @enderror">
                         </div>
 
+                        {{-- Ciudad --}}
+                        <div class="col-span-1">
+                            <label for="city" class="block text-sm font-medium text-gray-700">Ciudad</label>
+                            <input type="text" name="city" id="city" required
+                                value="{{ old('city') }}"
+                                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm text-black border-2 border-gray-300 rounded-md py-2 px-3 @error('city') border-red-500 @enderror">
+                        </div>
+
                         {{-- Especialidad --}}
                         <div class="col-span-1">
                             <label for="specialty" class="block text-sm font-medium text-gray-700">Especialidad</label>

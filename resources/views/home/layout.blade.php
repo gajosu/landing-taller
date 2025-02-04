@@ -99,7 +99,6 @@
                 ['label' => 'Eventos', 'route' => 'forms.events', 'isRoute' => true],
                 ['label' => 'Capacitaciones', 'route' => 'forms.trainings', 'isRoute' => true],
                 ['label' => 'Promociones', 'route' => 'forms.promotions', 'isRoute' => true],
-                ['label' => 'Marcas', 'route' => '/marcas', 'isRoute' => false],
                 ['label' => 'Contacto', 'route' => '/contacto', 'isRoute' => false],
             ];
 

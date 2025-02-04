@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\FormRecordController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminFormController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('home.home');
@@ -141,11 +144,29 @@ Route::get('/marcas/proto', function () {
     ]);
 })->name('marcas.proto');
 
-// Nueva ruta para los registros de formularios
+// Rutas públicas para formularios
 Route::get('/forms/{slug}', [FormController::class, 'show'])->name('forms.show');
 Route::post('/forms/{slug}/register', [FormRecordController::class, 'store'])->name('forms.register');
 
-// Agregar estas nuevas rutas
+// Rutas públicas para listados por tipo
 Route::get('/eventos', [FormController::class, 'events'])->name('forms.events');
 Route::get('/capacitaciones', [FormController::class, 'trainings'])->name('forms.trainings');
 Route::get('/promociones', [FormController::class, 'promotions'])->name('forms.promotions');
+
+// Rutas del panel de administración
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+    Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/forms', [AdminFormController::class, 'index'])->name('admin.forms.index');
+    Route::get('/forms/create', [AdminFormController::class, 'create'])->name('admin.forms.create');
+    Route::post('/forms', [AdminFormController::class, 'store'])->name('admin.forms.store');
+    Route::get('/forms/{form}/edit', [AdminFormController::class, 'edit'])->name('admin.forms.edit');
+    Route::put('/forms/{form}', [AdminFormController::class, 'update'])->name('admin.forms.update');
+    Route::delete('/forms/{form}', [AdminFormController::class, 'destroy'])->name('admin.forms.destroy');
+    Route::get('/forms/{form}/records', [AdminFormController::class, 'records'])->name('admin.forms.records');
+    Route::get('/forms/{form}/records/export', [AdminFormController::class, 'export'])->name('admin.forms.export');
+});
+
+// Ruta de autenticación
+Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('login', [AuthController::class, 'login']);
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');

@@ -14,6 +14,7 @@ class FormRecord extends Model
         'cedula',
         'phone',
         'email',
+        'city',
         'specialty',
         'business_type',
         'status' // para manejar estados como: pending, confirmed, attended, etc.
