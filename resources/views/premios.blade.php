@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
+@extends('home.layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Sorteos</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles.css">
-</head>
+@section('title', 'Registro de Sorteos')
 
-<body class="bg-white text-white">
+@section('content')
     <!-- Banner -->
-    <section class="h-screen relative">
+    <section class="h-screen relative mt-20">
         <!-- Desktop Banner Image -->
         <div class="hidden md:block bg-cover h-full flex flex-col justify-end bg-bottom backgroundSlideDown"
             style="background-image: url('/images/premios/banner.jpg'); animation-duration: 5s;"></div>
@@ -40,7 +31,7 @@
             <div class="flex justify-center">
                 <form action="{{ route('sorteo') }}" method="post" enctype="multipart/form-data"
                     class="w-full md:max-w-3xl shadow overflow-hidden rounded-md">
-                    {{ csrf_field() }}
+                    @csrf
 
                     <!-- Sección de Errores -->
                     @if ($errors->any())
@@ -157,7 +148,7 @@
                     </div>
                     <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                         <button type="submit"
-                            class="w-full py-3 mt-6 font-medium tracking-widest text-black uppercase shadow-lg bg-yellow-400 hover:bg-yellow-500 text-black  rounded-md">
+                            class="w-full py-3 mt-6 font-medium tracking-widest text-black uppercase shadow-lg bg-yellow-400 hover:bg-yellow-500 text-black rounded-md">
                             Registrarme
                         </button>
                     </div>
@@ -165,23 +156,67 @@
             </div>
         </div>
     </section>
+@endsection
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var registerButton = document.querySelector("#register-button");
+@section('styles')
+<style>
+    .backgroundSlideDown {
+        animation: slideDown 5s ease-out forwards;
+    }
 
-            registerButton.addEventListener("click", function(e) {
-                e.preventDefault(); // Prevent the default anchor behavior
-                var inscriptionSection = document.querySelector("#inscribe");
+    .fadeIn {
+        animation: fadeIn 1s ease-out forwards;
+    }
 
-                inscriptionSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
+    .fadeInUp {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes slideDown {
+        from {
+            background-position: center -100px;
+        }
+        to {
+            background-position: center bottom;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+@endsection
+
+@section('scripts')
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var registerButton = document.querySelector("#register-button");
+
+        registerButton.addEventListener("click", function(e) {
+            e.preventDefault();
+            var inscriptionSection = document.querySelector("#inscribe");
+
+            inscriptionSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
             });
         });
-    </script>
-
-</body>
-
-</html>
+    });
+</script>
+@endsection

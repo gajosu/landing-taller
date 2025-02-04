@@ -18,7 +18,7 @@ Route::get('/marcas', function () {
 
 Route::get('/contacto', function () {
     return view('home.contact');
-})->name('marcas');
+})->name('contact');
 
 Route::get('/activaciones', function () {
     return view('activaciones');
@@ -170,3 +170,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+
+// Ruta para la política de privacidad
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');

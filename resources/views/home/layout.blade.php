@@ -101,6 +101,7 @@
                 ['label' => 'Eventos', 'route' => 'forms.events', 'isRoute' => true],
                 ['label' => 'Capacitaciones', 'route' => 'forms.trainings', 'isRoute' => true],
                 ['label' => 'Promociones', 'route' => 'forms.promotions', 'isRoute' => true],
+                ['label' => 'Premios', 'route' => 'premios', 'isRoute' => false],
                 ['label' => 'Contacto', 'route' => '/contacto', 'isRoute' => false],
             ];
 
@@ -155,90 +156,37 @@
         <footer class="flex flex-col items-center justify-between p-4 md:flex-row">
             <div class="text-center md:text-left">
                 <p class="text-sm text-gray-600">
-                    Copyright © 2024 Stanley Black &amp; Decker, Inc. All rights reserved.
+                    Copyright © 2024 Centro de Entrenamiento SBD. Todos los derechos reservados.
                 </p>
                 <div class="flex flex-wrap justify-center mt-2 space-x-2 text-sm text-gray-600 md:justify-start">
-                    <a class="hover:underline" href="#">
-                        Privacy
+                    <a class="hover:underline" href="{{ route('privacy') }}">
+                        Política de Privacidad
                     </a>
-                    <span>
-                        |
-                    </span>
-                    <a class="hover:underline" href="#">
-                        Cookies
-                    </a>
-                    <span>
-                        |
-                    </span>
-                    <a class="hover:underline" href="#">
-                        California Privacy
-                    </a>
-                    <span>
-                        |
-                    </span>
-                    <a class="hover:underline" href="#">
-                        Terms of Use
-                    </a>
-                    <span>
-                        |
-                    </span>
-                    <a class="hover:underline" href="#">
-                        Site Map
-                    </a>
-                    <span>
-                        |
-                    </span>
-                    <a class="hover:underline" href="#">
-                        Transparency in the Supply Chain
-                    </a>
-                    <span>
-                        |
-                    </span>
-                    <a class="hover:underline" href="#">
-                        Vulnerability Disclosure Policy
-                    </a>
-                    <span>
-                        |
-                    </span>
-                    <a class="hover:underline" href="#">
-                        Accessibility Statement
+                    <span>|</span>
+                    <a class="hover:underline" href="{{ route('contact') }}">
+                        Contacto
                     </a>
                 </div>
-
             </div>
             <div class="flex items-center mt-4 space-x-2 md:mt-0">
                 <div class="flex items-center space-x-2">
-                    <img alt="Accessibility icon" class="w-6 h-6" height="30"
-                        src="https://storage.googleapis.com/a1aa/image/NNOxuwpfV1zoMaPVCuUTtLfrVdsSO0ZyBUem2fpV2EJCReKfE.jpg"
-                        width="30">
-                    <img alt="Website icon" class="w-6 h-6" height="30"
-                        src="https://storage.googleapis.com/a1aa/image/2jDDPhTFOt4nBRzhBIyflgiKln5J6PGTQ2BUSfJjAvfkIvynA.jpg"
-                        width="30">
-                </div>
-                <div class="flex items-center space-x-2 ml-4">
-                    <a class="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full" href="#">
-                        <i class="fab fa-facebook-f">
-                        </i>
+                    <a href="https://www.facebook.com/centroentrenamientosbd" target="_blank"
+                       class="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full hover:bg-gray-800">
+                        <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full" href="#">
-                        <i class="fab fa-instagram">
-                        </i>
+                    <a href="https://www.instagram.com/centroentrenamientosbd" target="_blank"
+                       class="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full hover:bg-gray-800">
+                        <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full" href="#">
-                        <i class="fab fa-linkedin-in">
-                        </i>
+                    {{-- tiktok --}}
+                    <a href="https://www.tiktok.com/@centrodeentrenamientosbd" target="_blank"
+                       class="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full hover:bg-gray-800">
+                        <i class="fab fa-tiktok"></i>
                     </a>
-                    <a class="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full" href="#">
-                        <i class="fab fa-twitter">
-                        </i>
-                    </a>
-                    <a class="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full" href="#">
-                        <i class="fab fa-youtube">
-                        </i>
-                    </a>
-                    <a class="flex items-center justify-center px-4 py-2 text-sm text-white bg-black rounded-full"
-                        href="#">
-                        Sign Up for Email
+                    {{-- whatsapp --}}
+                    <a href="https://chat.whatsapp.com/C8838vbbWWlHrDbyJ7b75L" target="_blank"
+                       class="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full hover:bg-gray-800">
+                        <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
             </div>
