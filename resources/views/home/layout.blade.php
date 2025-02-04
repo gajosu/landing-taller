@@ -1,9 +1,10 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <<title>
         {{ !empty($siteTitle) ? $siteTitle . ' | ' : '' }}Centro de entrenamiento SBD
     </title>
 
@@ -12,9 +13,70 @@
     @else
         <meta name="description" content="{{ $meta_description }}">
     @endif
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{ !empty($siteTitle) ? $siteTitle . ' | ' : '' }}Centro de entrenamiento SBD">
+    <meta property="og:description" content="{{ $meta_description ?? 'Centro de entrenamiento SBD' }}">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <style>
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-slideDown {
+            animation: slideDown 0.3s ease-out forwards;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+            function toggleMobileMenu() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuIcon = document.getElementById('menu-icon');
+                const closeIcon = document.getElementById('close-icon');
+
+                if (mobileMenu.classList.contains('hidden')) {
+                    // Abrir menú
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('animate-slideDown');
+                    menuIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                } else {
+                    // Cerrar menú
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            }
+
+            // Asignar el evento click al botón
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+            // Cerrar menú al cambiar el tamaño de la ventana
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768) {
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const menuIcon = document.getElementById('menu-icon');
+                    const closeIcon = document.getElementById('close-icon');
+
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 
     {{-- Sección para CSS específico de cada página --}}
     @yield('styles')
@@ -31,19 +93,59 @@
                     src="/images/logoSBD.svg"
                     width="150" />
             </div>
+            @php
+            $menuItems = [
+                ['label' => 'Inicio', 'route' => '/', 'isRoute' => false],
+                ['label' => 'Eventos', 'route' => 'forms.events', 'isRoute' => true],
+                ['label' => 'Capacitaciones', 'route' => 'forms.trainings', 'isRoute' => true],
+                ['label' => 'Promociones', 'route' => 'forms.promotions', 'isRoute' => true],
+                ['label' => 'Marcas', 'route' => '/marcas', 'isRoute' => false],
+                ['label' => 'Contacto', 'route' => '/contacto', 'isRoute' => false],
+            ];
+
+            $currentUrl = request()->url();
+            $currentRoute = Route::currentRouteName();
+            @endphp
+
+            {{-- Menú Desktop --}}
             <nav class="hidden md:flex space-x-6">
-                <a class="text-black hover:text-yellow-500" href="/">
-                    Inicio
-                </a>
-                <a class="text-black hover:text-yellow-500" href="/marcas">
-                    Marcas
-                </a>
-                <a class="text-black hover:text-yellow-500" href="/contacto">
-                    Contacto
-                </a>
+                @foreach($menuItems as $item)
+                    @php
+                        $isActive = $item['isRoute']
+                            ? $currentRoute === $item['route']
+                            : $currentUrl === url($item['route']);
+                    @endphp
+                    <a class="text-black hover:text-gray-800 relative group py-2 {{ $isActive ? 'font-bold' : '' }}"
+                       href="{{ $item['isRoute'] ? route($item['route']) : $item['route'] }}">
+                        {{ $item['label'] }}
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform {{ $isActive ? 'scale-x-100' : 'scale-x-0' }} group-hover:scale-x-100 transition-transform duration-300"></span>
+                    </a>
+                @endforeach
             </nav>
 
+            {{-- Botón Menú Móvil --}}
+            <button id="mobile-menu-button" class="md:hidden text-black focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" class="block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
         </div>
+
+        {{-- Menú Móvil --}}
+        <nav id="mobile-menu" class="md:hidden hidden bg-white">
+            @foreach($menuItems as $item)
+                @php
+                    $isActive = $item['isRoute']
+                        ? $currentRoute === $item['route']
+                        : $currentUrl === url($item['route']);
+                @endphp
+                <a class="block px-6 py-4 text-black hover:bg-yellow-100 {{ $isActive ? 'font-bold bg-yellow-50' : '' }}"
+                   href="{{ $item['isRoute'] ? route($item['route']) : $item['route'] }}">
+                    {{ $item['label'] }}
+                </a>
+            @endforeach
+        </nav>
     </header>
     <main>
         @yield('content')

@@ -144,3 +144,8 @@ Route::get('/marcas/proto', function () {
 // Nueva ruta para los registros de formularios
 Route::get('/forms/{slug}', [FormController::class, 'show'])->name('forms.show');
 Route::post('/forms/{slug}/register', [FormRecordController::class, 'store'])->name('forms.register');
+
+// Agregar estas nuevas rutas
+Route::get('/eventos', [FormController::class, 'events'])->name('forms.events');
+Route::get('/capacitaciones', [FormController::class, 'trainings'])->name('forms.trainings');
+Route::get('/promociones', [FormController::class, 'promotions'])->name('forms.promotions');

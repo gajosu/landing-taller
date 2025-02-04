@@ -42,4 +42,46 @@ class FormController extends Controller
     {
         return view('forms.thanks');
     }
+
+    public function events()
+    {
+        $forms = Form::where('type', 'evento')
+                     ->where('is_active', true)
+                     ->orderBy('event_date', 'asc')
+                     ->get();
+
+        return view('forms.index', [
+            'forms' => $forms,
+            'title' => 'Eventos',
+            'meta_description' => 'Descubre nuestros próximos eventos'
+        ]);
+    }
+
+    public function trainings()
+    {
+        $forms = Form::where('type', 'capacitacion')
+                     ->where('is_active', true)
+                     ->orderBy('event_date', 'asc')
+                     ->get();
+
+        return view('forms.index', [
+            'forms' => $forms,
+            'title' => 'Capacitaciones',
+            'meta_description' => 'Nuestras capacitaciones disponibles'
+        ]);
+    }
+
+    public function promotions()
+    {
+        $forms = Form::where('type', 'promocion')
+                     ->where('is_active', true)
+                     ->orderBy('event_date', 'asc')
+                     ->get();
+
+        return view('forms.index', [
+            'forms' => $forms,
+            'title' => 'Promociones',
+            'meta_description' => 'Promociones especiales disponibles'
+        ]);
+    }
 }
