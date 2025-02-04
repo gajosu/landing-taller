@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <<title>
+    <title>
         {{ !empty($siteTitle) ? $siteTitle . ' | ' : '' }}Centro de entrenamiento SBD
     </title>
 
@@ -89,9 +89,11 @@
     <header class="shadow-md fixed top-0 w-full z-50" style="background: #febd18;">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center">
-                <img alt="Centro de entrenamiento SBD Logo" class="h-14"
-                    src="/images/logoSBD.svg"
-                    width="150" />
+                <a href="/">
+                    <img alt="Centro de entrenamiento SBD Logo" class="h-14"
+                        src="/images/logoSBD.svg"
+                        width="150" />
+                </a>
             </div>
             @php
             $menuItems = [
