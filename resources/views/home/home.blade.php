@@ -52,7 +52,7 @@
                     <div class="swiper-wrapper">
                         @foreach (['BLACK-AND-DECKER', 'DEWALT', 'STANLEY', 'CRAFTSMAN', 'IRWIN', 'PROTO'] as $brand)
                             <div class="swiper-slide">
-                                <a href="/marcas/{{ strtolower($brand) }}">
+                                <a href="/brands/{{ strtolower($brand) }}">
                                     <div
                                         class="bg-white shadow-lg rounded-md w-[150px] h-[150px] flex items-center justify-center mx-auto">
                                         <img src="/images/thumbnails-brands/{{ $brand }}.png" alt="{{ $brand }}"

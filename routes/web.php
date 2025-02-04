@@ -12,10 +12,6 @@ Route::get('/', function () {
     return view('home.home');
 });
 
-Route::get('/marcas', function () {
-    return view('home.brands');
-})->name('marcas');
-
 Route::get('/contacto', function () {
     return view('home.contact');
 })->name('contact');
@@ -102,42 +98,42 @@ Route::get('/tallertulcan', function () {
 })->name('tallertulcan');
 
 
-Route::get('/marcas/black-and-decker', function () {
+Route::get('/brands/black-and-decker', function () {
     return view('home.brands.black-and-decker', [
         'siteTitle' => 'Black & Decker',
         'meta_description' => 'Black & Decker'
     ]);
 })->name('marcas.black-and-decker');
 
-Route::get('/marcas/dewalt', function () {
+Route::get('/brands/dewalt', function () {
     return view('home.brands.dewalt', [
         'siteTitle' => 'Dewalt',
         'meta_description' => 'Dewalt'
     ]);
 })->name('marcas.dewalt');
 
-Route::get('/marcas/stanley', function () {
+Route::get('/brands/stanley', function () {
     return view('home.brands.stanley', [
         'siteTitle' => 'Stanley',
         'meta_description' => 'Stanley'
     ]);
 })->name('marcas.stanley');
 
-Route::get('/marcas/craftsman', function () {
+Route::get('/brands/craftsman', function () {
     return view('home.brands.craftsman', [
         'siteTitle' => 'Craftsman',
         'meta_description' => 'Craftsman'
     ]);
 })->name('marcas.craftsman');
 
-Route::get('/marcas/irwin', function () {
+Route::get('/brands/irwin', function () {
     return view('home.brands.irwin', [
         'siteTitle' => 'Irwin',
         'meta_description' => 'Irwin'
     ]);
 })->name('marcas.irwin');
 
-Route::get('/marcas/proto', function () {
+Route::get('/brands/proto', function () {
     return view('home.brands.proto', [
         'siteTitle' => 'Proto',
         'meta_description' => 'Proto'
