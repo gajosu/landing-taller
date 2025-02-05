@@ -138,4 +138,30 @@ class AdminFormController extends Controller
     {
         return Excel::download(new FormRecordsExport($form), $form->slug . '_registros.xlsx');
     }
+
+    public function destroy(Form $form)
+    {
+        try {
+            // Eliminar los banners si existen
+            if ($form->banner_desktop) {
+                $path = str_replace('/storage', '', parse_url($form->banner_desktop, PHP_URL_PATH));
+                Storage::disk('real_public')->delete($path);
+            }
+
+            if ($form->banner_mobile) {
+                $path = str_replace('/storage', '', parse_url($form->banner_mobile, PHP_URL_PATH));
+                Storage::disk('real_public')->delete($path);
+            }
+
+            // Eliminar el formulario
+            $form->delete();
+
+            return redirect()->route('admin.forms.index')
+                ->with('success', 'Formulario eliminado exitosamente.');
+
+        } catch (\Exception $e) {
+            return redirect()->route('admin.forms.index')
+                ->with('error', 'No se pudo eliminar el formulario. Por favor, inténtelo de nuevo.');
+        }
+    }
 }

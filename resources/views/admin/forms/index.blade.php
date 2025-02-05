@@ -82,7 +82,7 @@
                                     <form action="{{ route('admin.forms.destroy', $form) }}"
                                           method="POST"
                                           class="inline"
-                                          onsubmit="return confirm('¿Estás seguro de que deseas eliminar este formulario?')">
+                                          onsubmit="return confirm('¿Estás seguro de que deseas eliminar este formulario? Se eliminarán todos los registros asociados.')">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="text-red-600 hover:text-red-900">
