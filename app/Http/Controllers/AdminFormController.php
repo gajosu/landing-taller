@@ -35,8 +35,8 @@ class AdminFormController extends Controller
             'meta_description' => 'required'
         ]);
 
-        $validated['banner_desktop'] = Storage::url($request->file('banner_desktop')->store('banners'));
-        $validated['banner_mobile'] = Storage::url($request->file('banner_mobile')->store('banners'));
+        $validated['banner_desktop'] = Storage::disk('real_public')->url($request->file('banner_desktop')->store('banners', 'real_public'));
+        $validated['banner_mobile'] = Storage::disk('real_public')->url($request->file('banner_mobile')->store('banners', 'real_public'));
 
         Form::create($validated);
 
@@ -63,11 +63,11 @@ class AdminFormController extends Controller
         ]);
 
         if ($request->hasFile('banner_desktop')) {
-            $validated['banner_desktop'] = $request->file('banner_desktop')->store('banners', 'public');
+            $validated['banner_desktop'] = Storage::disk('real_public')->url($request->file('banner_desktop')->store('banners', 'real_public'));
         }
 
         if ($request->hasFile('banner_mobile')) {
-            $validated['banner_mobile'] = $request->file('banner_mobile')->store('banners', 'public');
+            $validated['banner_mobile'] = Storage::disk('real_public')->url($request->file('banner_mobile')->store('banners', 'real_public'));
         }
 
         $form->update($validated);
