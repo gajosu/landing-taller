@@ -12,6 +12,7 @@ class Form extends Model
         'description',
         'event_date',
         'event_time',
+        'end_time',
         'event_address',
         'event_city',
         'banner_desktop',
@@ -24,7 +25,9 @@ class Form extends Model
 
     protected $casts = [
         'event_date' => 'date',
-        'is_active' => 'boolean'
+        'is_active' => 'boolean',
+        'event_time' => 'datetime',
+        'end_time' => 'datetime'
     ];
 
     public function inscriptions()

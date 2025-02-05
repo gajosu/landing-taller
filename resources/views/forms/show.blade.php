@@ -29,27 +29,36 @@
     </section>
 
     <!-- Info Section -->
-    {{-- <section class="bg-gray-200 text-gray-800 py-10">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-around items-center text-center">
-                <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
-                    <i class="fas fa-calendar-check fa-4x mb-5"></i>
-                    <span class="font-semibold">FECHA</span>
-                    <span>{{ $form->event_date->format('d/m/Y') }}</span>
-                </div>
-                <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
-                    <i class="fas fa-map-marker-alt fa-4x mb-5"></i>
-                    <span class="font-semibold">DIRECCIÓN</span>
-                    <span>{{ $form->event_address }}</span>
-                </div>
-                <div class="flex flex-col items-center w-full md:w-1/4">
-                    <i class="fas fa-clock fa-4x mb-5"></i>
-                    <span class="font-semibold">HORA</span>
-                    <span>{{ $form->event_time }}</span>
+    @if($form->event_date && $form->event_time && $form->event_address)
+        <section class="bg-gray-200 text-gray-800 py-10">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-around items-center text-center">
+                    <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
+                        <i class="fas fa-calendar-check fa-4x mb-5"></i>
+                        <span class="font-semibold">FECHA</span>
+                        <span>{{ $form->event_date->format('d/m/Y') }}</span>
+                    </div>
+                    <div class="flex flex-col items-center w-full md:w-1/4 mb-4 md:mb-0">
+                        <i class="fas fa-map-marker-alt fa-4x mb-5"></i>
+                        <span class="font-semibold">DIRECCIÓN</span>
+                        <span>{{ $form->event_address }}</span>
+                        @if($form->event_city)
+                            <span>{{ $form->event_city }}</span>
+                        @endif
+                    </div>
+                    <div class="flex flex-col items-center w-full md:w-1/4">
+                        <i class="fas fa-clock fa-4x mb-5"></i>
+                        <span class="font-semibold">HORA</span>
+                        <span>{{ \Carbon\Carbon::parse($form->event_time)->format('H:i') }}
+                            @if($form->end_time)
+                                - {{ \Carbon\Carbon::parse($form->end_time)->format('H:i') }}
+                            @endif
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section> --}}
+        </section>
+    @endif
 
     <!-- Form Section -->
     @include('forms.partials.inscription-form', ['form' => $form])

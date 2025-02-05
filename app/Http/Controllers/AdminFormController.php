@@ -24,7 +24,7 @@ class AdminFormController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $validationRules = [
             'name' => 'required|max:255',
             'slug' => 'required|unique:forms',
             'description' => 'required',
@@ -32,11 +32,37 @@ class AdminFormController extends Controller
             'button_text' => 'required',
             'banner_desktop' => 'required|image',
             'banner_mobile' => 'required|image',
-            'meta_description' => 'required'
-        ]);
+            'meta_description' => 'required',
+            'is_active' => 'boolean'
+        ];
 
-        $validated['banner_desktop'] = Storage::disk('real_public')->url($request->file('banner_desktop')->store('banners', 'real_public'));
-        $validated['banner_mobile'] = Storage::disk('real_public')->url($request->file('banner_mobile')->store('banners', 'real_public'));
+        if ($request->has('has_event')) {
+            $validationRules = array_merge($validationRules, [
+                'event_date' => 'required|date',
+                'event_time' => 'required',
+                'end_time' => 'required|after:event_time',
+                'event_address' => 'required',
+                'event_city' => 'required'
+            ]);
+        }
+
+        $validated = $request->validate($validationRules);
+        $validated['is_active'] = $request->has('is_active');
+
+        $validated['banner_desktop'] = Storage::disk('real_public')->url(
+            $request->file('banner_desktop')->store('banners', 'real_public')
+        );
+        $validated['banner_mobile'] = Storage::disk('real_public')->url(
+            $request->file('banner_mobile')->store('banners', 'real_public')
+        );
+
+        if (!$request->has('has_event')) {
+            $validated['event_date'] = null;
+            $validated['event_time'] = null;
+            $validated['end_time'] = null;
+            $validated['event_address'] = null;
+            $validated['event_city'] = null;
+        }
 
         Form::create($validated);
 
@@ -51,7 +77,7 @@ class AdminFormController extends Controller
 
     public function update(Request $request, Form $form)
     {
-        $validated = $request->validate([
+        $validationRules = [
             'name' => 'required|max:255',
             'slug' => 'required|unique:forms,slug,' . $form->id,
             'description' => 'required',
@@ -59,15 +85,41 @@ class AdminFormController extends Controller
             'banner_mobile' => 'image|nullable',
             'button_text' => 'required',
             'type' => 'required|in:evento,capacitacion,promocion',
-            'meta_description' => 'required'
-        ]);
+            'meta_description' => 'required',
+            'is_active' => 'boolean'
+        ];
+
+        if ($request->has('has_event')) {
+            $validationRules = array_merge($validationRules, [
+                'event_date' => 'required|date',
+                'event_time' => 'required',
+                'end_time' => 'required|after:event_time',
+                'event_address' => 'required',
+                'event_city' => 'required'
+            ]);
+        }
+
+        $validated = $request->validate($validationRules);
+        $validated['is_active'] = $request->has('is_active');
 
         if ($request->hasFile('banner_desktop')) {
-            $validated['banner_desktop'] = Storage::disk('real_public')->url($request->file('banner_desktop')->store('banners', 'real_public'));
+            $validated['banner_desktop'] = Storage::disk('real_public')->url(
+                $request->file('banner_desktop')->store('banners', 'real_public')
+            );
         }
 
         if ($request->hasFile('banner_mobile')) {
-            $validated['banner_mobile'] = Storage::disk('real_public')->url($request->file('banner_mobile')->store('banners', 'real_public'));
+            $validated['banner_mobile'] = Storage::disk('real_public')->url(
+                $request->file('banner_mobile')->store('banners', 'real_public')
+            );
+        }
+
+        if (!$request->has('has_event')) {
+            $validated['event_date'] = null;
+            $validated['event_time'] = null;
+            $validated['end_time'] = null;
+            $validated['event_address'] = null;
+            $validated['event_city'] = null;
         }
 
         $form->update($validated);
