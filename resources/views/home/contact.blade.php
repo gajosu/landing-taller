@@ -75,10 +75,16 @@
 
         <section class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="rounded-lg p-6 shadow-lg bg-white">
-                <h2 class="text-2xl font-semibold mb-4">Ubicación</h2>
-                <div class="flex items-start space-x-3">
+                <h2 class="text-2xl font-semibold mb-4">Información de Contacto</h2>
+                <div class="flex items-start space-x-3 mb-4">
                     <i class="fas fa-map-marker-alt mt-1 text-amber-500"></i>
                     <p>Guayaquil, Ecuador<br>Av. Juan Tanca Marengo, km 2.5<br>CC Dicentro, planta alta local 18.</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <i class="fas fa-envelope mt-1 text-amber-500"></i>
+                    <a href="mailto:info@cesbd.ec" class="hover:text-amber-500 transition-colors">
+                        info@cesbd.ec
+                    </a>
                 </div>
             </div>
 
