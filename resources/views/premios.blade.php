@@ -7,7 +7,7 @@
     <section class="h-screen relative mt-20">
         <!-- Desktop Banner Image -->
         <div class="hidden md:block bg-cover h-full flex flex-col justify-end bg-bottom backgroundSlideDown"
-            style="background-image: url('/images/premios/premio-pag-web-sbd.png'); animation-duration: 5s;"></div>
+            style="background-image: url('/images/premios/banner_pag-web-sbd_desktop-2.png'); animation-duration: 5s;"></div>
 
         <!-- Mobile Banner Image -->
         <div class="block md:hidden w-full h-full bg-cover flex flex-col justify-end bg-bottom backgroundSlideDown"
