@@ -28,7 +28,7 @@ class SorteoController extends Controller
             'ciudad' => 'required',
             'monto' => 'required',
             'fecha' => 'required',
-            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'imagen' => 'required|file|mimes:pdf|max:25600',
         ]);
 
         // put imagen with laravel storage
